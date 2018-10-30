@@ -1,22 +1,23 @@
 var cart = [];
-var item= function(name,price,count) {
+var Item= function(name,price,count) {
     this.name = name;
     this.price = price;
     this.count = count;
 };
 function addItemToCart(name,price,count) {
     for (var i in cart) {
-        if (cart[i].name ===name) {
-            car[i].count +=count;
+        if (cart[i].name === name) {
+            cart[i].count ++;
             return;
         }
     }
     var item = new Item(name,price,count);
     cart.push(item);
 }
-addItemToCart('Apple',1.22,3);
+addItemToCart('Apple',1.22,1);
 addItemToCart('Apple',1.22,1);
 addItemToCart('Pear',1.72,3);
+addItemToCart('Apple',1.22,3);
 function removeItemFromCart(name) {
     for (var i in cart) {
         if (cart[i].name ===name) {
