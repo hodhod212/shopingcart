@@ -1,5 +1,5 @@
 //jquery
-$(".add-to-cart").click(function(event) {
+/* $(".add-to-cart").click(function(event) {
     event.preventDefault();
     var name = $(this).attr("data-name");
     var price = Number($(this).attr("data-price"));
@@ -105,4 +105,4 @@ function loadCart() {
     cart = JSON.parse(localStorage.getItem("shoppingCart"));
 }
 loadCart();
-var array = listCart();
+var array = listCart(); */

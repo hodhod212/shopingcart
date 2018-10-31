@@ -27,14 +27,15 @@
     </div>
     <div>
         <ul id="show-cart">
-           <!-----> 
+           <li></li>
         </ul>
-        
+        <div>Total pris: &nbsp;<span id="total-cart"></span>&nbsp;kr</div>
     </div>
 
 </body>
 <script>
     //jquery
+//$("#total-cart").html("11495")
 $(".add-to-cart").click(function(event) {
     event.preventDefault();
     var name = $(this).attr("data-name");
@@ -43,12 +44,14 @@ $(".add-to-cart").click(function(event) {
     displayCart();
 });
 function displayCart() {
+    //console.log('***Display Cart***')
     var cartArray = listCart();
     var output = "";
     for (var i in cartArray) {
         output +="<li>" + cartArray[i].name + " " + cartArray[i].count + "</li>"
     }
     $("#show-cart").html(output);
+    $("#total-cart").html("11495")
 }
 
 //Shopping Cart
@@ -93,11 +96,11 @@ if (cart[i].name === name) {
 }
 saveCart();
 }
+
 addItemToCart("iPhone X",11495,1);
 addItemToCart("One Plus 5",4995,1);
 addItemToCart("Galaxy S8",7990,1);
 addItemToCart("LG V30",7495,1);
-
 
 function ClearCart () {
     cart = [];
@@ -132,7 +135,7 @@ for (var i in cart) {
 }
 return cartCopy;
 }
-console.log(cart);
+
 
 function saveCart() {
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
@@ -141,6 +144,7 @@ function loadCart() {
     cart = JSON.parse(localStorage.getItem("shoppingCart"));
 }
 loadCart();
+displayCart();
 var array = listCart();
 </script>
 </html>
