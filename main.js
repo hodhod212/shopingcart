@@ -58,6 +58,9 @@ if (cart[i].name === name) {
 saveCart();
 }
 addItemToCart("iPhone X",11495,1);
+addItemToCart("One Plus 5",4995,1);
+addItemToCart("Galaxy S8",7990,1);
+addItemToCart("LG V30",7495,1);
 
 
 function ClearCart () {
@@ -93,7 +96,7 @@ for (var i in cart) {
 }
 return cartCopy;
 }
-
+console.log(cart);
 
 function saveCart() {
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
