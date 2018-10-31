@@ -1,3 +1,21 @@
+//jquery
+$(".add-to-cart").click(function(event) {
+    event.preventDefault();
+    var name = $(this).attr("data-name");
+    var price = Number($(this).attr("data-price"));
+    addItemToCart(name,price,1);
+    displayCart();
+});
+function displayCart() {
+    var cartArray = listCart();
+    var output = "";
+    for (var i in cartArray) {
+        output +="<li>" + cartArray[i].name + " " + cartArray[i].count + "</li>"
+    }
+    $("#show-cart").html(output);
+}
+
+//Shopping Cart
 var cart = [];
 var Item= function(name,price,count) {
     this.name = name;
@@ -13,11 +31,9 @@ function addItemToCart(name,price,count) {
     }
     var item = new Item(name,price,count);
     cart.push(item);
+    saveCart();
 }
-addItemToCart('Apple',1.22,1);
-addItemToCart('Apple',1.22,1);
-addItemToCart('Pear',1.72,3);
-addItemToCart('Apple',1.22,3);
+
 function removeItemFromCart(name) {
     for (var i in cart) {
         if (cart[i].name ===name) {
@@ -30,5 +46,60 @@ function removeItemFromCart(name) {
             break;
         }
     }
+    saveCart();
 }
-console.log(cart[0].count);
+function removeItemFromCartAll(name) {
+for (var i in cart) {
+if (cart[i].name === name) {
+    cart.splice(i,1);
+    break;
+}
+}
+saveCart();
+}
+addItemToCart("iPhone X",11495,1);
+
+
+function ClearCart () {
+    cart = [];
+    saveCart();
+}
+
+function countCart() {
+    var totalCount = 0;
+    for (var i in cart) {
+        totalCount +=cart[i].count;
+    }
+    return totalCount;
+}
+function totalCart() {
+    var totalCost = 0;
+    for(var i in cart) {
+        totalCost +=(cart[i].price)*cart[i].count; 
+    }
+   return totalCost;
+}
+
+function listCart() {
+    var cartCopy = [];
+
+for (var i in cart) {
+    var item = cart[i];
+    var itemCopy ={};
+    for (var p in item) {
+        itemCopy[p] = item[p];
+    }
+    cartCopy.push(itemCopy)
+}
+return cartCopy;
+}
+
+
+function saveCart() {
+    localStorage.setItem('shoppingCart', JSON.stringify(cart));
+}
+function loadCart() {
+    cart = JSON.parse(localStorage.getItem("shoppingCart"));
+}
+loadCart();
+var array = listCart();
