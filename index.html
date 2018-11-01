@@ -15,7 +15,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h1>Shopping Cart</h1>
+    <h3>Kundvagn</h3>
     <div>
         <ul>
             <li><a class="add-to-cart" href="#" data-name='iPhone X' data-price='11495'>iPhone X</a> </li>
@@ -40,7 +40,12 @@ $(".add-to-cart").click(function(event) {
     event.preventDefault();
     var name = $(this).attr("data-name");
     var price = Number($(this).attr("data-price"));
-    addItemToCart(name,price,count);
+    addItemToCart(name,price,1);
+    displayCart();
+});
+
+$("#clear-cart").click(function(event){
+    ClearCart();
     displayCart();
 });
 function displayCart() {
@@ -48,7 +53,9 @@ function displayCart() {
     var cartArray = listCart();
     var output = "";
     for (var i in cartArray) {
-        output +="<li>" + cartArray[i].name + " " + cartArray[i].count + "</li>"
+        output +="<li>" + cartArray[i].name + "&nbsp; &nbsp;" +
+             cartArray[i].count +
+             " x " + cartArray[i].price + " = " + cartArray[i].total.toFixed(2) +" kr " +"</li>"
     }
     $("#show-cart").html(output);
     $("#total-cart").html(totalCart());
@@ -98,10 +105,10 @@ if (cart[i].name === name) {
 saveCart();
 }
 
-addItemToCart("iPhone X",11495,1);
-addItemToCart("One Plus 5",4995,1);
-addItemToCart("Galaxy S8",7990,1);
-addItemToCart("LG V30",7495,1);
+//addItemToCart("iPhone X",11495,1);
+//addItemToCart("One Plus 5",4995,1);
+//addItemToCart("Galaxy S8",7990,1);
+//addItemToCart("LG V30",7495,1);
 
 function ClearCart () {
     cart = [];
@@ -120,7 +127,7 @@ function totalCart() {
     for(var i in cart) {
         totalCost +=(cart[i].price)*cart[i].count; 
     }
-   return totalCost;
+   return totalCost.toFixed(2);
 }
 
 function listCart() {
@@ -132,7 +139,8 @@ for (var i in cart) {
     for (var p in item) {
         itemCopy[p] = item[p];
     }
-    cartCopy.push(itemCopy)
+    itemCopy.total = item.price*item.count;
+    cartCopy.push(itemCopy);
 }
 return cartCopy;
 }
