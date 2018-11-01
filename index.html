@@ -53,14 +53,41 @@ function displayCart() {
     var cartArray = listCart();
     var output = "";
     for (var i in cartArray) {
-        output +="<li>" + cartArray[i].name + "&nbsp; &nbsp;" +
-             cartArray[i].count +
-             " x " + cartArray[i].price + " = " + cartArray[i].total.toFixed(2) +" kr " +"</li>"
+        output +="<li>" 
+            + cartArray[i].name 
+            + "&nbsp; &nbsp;" 
+            + cartArray[i].count
+            + " x " 
+            + cartArray[i].price 
+            +  " = " 
+            + cartArray[i].total.toFixed(2) 
+            + " kr "
+            + "<button class='plus-item' data-name='"
+            +cartArray[i].name+"' >+</button>"
+            + "<button class='subtract-item' data-name='"
+            +cartArray[i].name+"' >-</button>"
+            + "<button class='delete-item' data-name='"
+            +cartArray[i].name+"' >x</button>" 
+            + "</li>"
     }
     $("#show-cart").html(output);
     $("#total-cart").html(totalCart());
 }
-
+$("#show-cart").on("click", ".delete-item", function(event){
+var name = $(this).attr("data-name");
+removeItemFromCartAll(name);
+displayCart();
+});
+$("#show-cart").on("click", ".subtract-item", function(event){
+var name = $(this).attr("data-name");
+removeItemFromCart(name);
+displayCart();
+});
+$("#show-cart").on("click", ".plus-item", function(event){
+var name = $(this).attr("data-name");
+addItemToCart(name,0,1);
+displayCart();
+});
 //Shopping Cart
 var cart = [];
 var Item= function(name,price,count) {
@@ -139,7 +166,7 @@ for (var i in cart) {
     for (var p in item) {
         itemCopy[p] = item[p];
     }
-    itemCopy.total = item.price*item.count;
+    itemCopy.total =item.price*item.count;
     cartCopy.push(itemCopy);
 }
 return cartCopy;
