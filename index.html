@@ -50,8 +50,6 @@
 <body onload="initSite()">
         <div class="topnav">
                 <a class="active" href="#home">Techstore</a>
-                <a href="#news">Login</a>
-                <a href="#contact">Signin</a>
                 <a href="kundvagn.html" style="float:right;"><img src="assets/kundv_t.png" style="width:24px;"></a>
                 <a href="#" id="count-cart" style="float:right;">0</a>
                 <a href="#" style="float:right;"> <button id="clear-cart" class="mobile" style="border-radius:5px;">Rensa vagnen</button></a>
@@ -68,7 +66,7 @@
               
                  
 </body >
-
+<script src="mockups/shoppingCart.js"></script>
 <script>
     
 ///main div
@@ -268,92 +266,13 @@ function initSite() {
         shoppingCart.addItemToCart(name,0,1);
         displayCart();
         });
-        //Shopping Cart
-        var shoppingCart = {};
-        shoppingCart.cart = [];
-
-       shoppingCart.Item= function(name,price,count) {
-                    this.name = name;
-                    this.price = price;
-                    this.count = count;
-                };
-        shoppingCart.addItemToCart = function (name,price,count) {
-            for (var i in this.cart) {
-                if (this.cart[i].name === name) {
-                    this.cart[i].count +=count;
-                    this.saveCart();
-                    return;
-                }
-            }
-           var item = new this.Item(name,price,count);
-            this.cart.push(item);
-            this.saveCart();
-        };
-        shoppingCart.removeItemFromCart = function (name) {
-            for (var i in this.cart) {
-                if (this.cart[i].name ===name) {
-                    this.cart[i].count --;
-                    
-                
-                    if (this.cart[i].count === 0) {
-                    this.cart.splice(i,1);
-                    }
-                    break;
-                }
-            }
-            this.saveCart();
-        };
-        shoppingCart.removeItemFromCartAll = function (name) {
-        for (var i in this.cart) {
-        if (this.cart[i].name === name) {
-            this.cart.splice(i,1);
-            break;
-        }
-        };
-        this.saveCart();
-        }
-        shoppingCart.ClearCart = function  () {
-            this.cart = [];
-            this.saveCart();
-        };
-        shoppingCart.countCart = function () {
-            var totalCount = 0;
-            for (var i in this.cart) {
-                totalCount +=this.cart[i].count;
-            }
-            return totalCount;
-    
-        };
-        shoppingCart.totalCart = function () {
-            var totalCost = 0;
-            for(var i in this.cart) {
-                totalCost +=(this.cart[i].price)*this.cart[i].count; 
-            }
-           return totalCost.toFixed(2);
-          
-        };
-        shoppingCart.listCart = function () {
-            var cartCopy = [];
-        
-        for (var i in this.cart) {
-            var item = this.cart[i];
-            var itemCopy ={};
-            for (var p in item) {
-                itemCopy[p] = item[p];
-            }
-            itemCopy.total =item.price*item.count;
-            cartCopy.push(itemCopy);
-        }
-        return cartCopy;
-      
-        };
-        shoppingCart.saveCart = function () {
-            localStorage.setItem('shoppingCart', JSON.stringify(this.cart));
-        };
-        shoppingCart.loadCart = function () {
-            this.cart = JSON.parse(localStorage.getItem("shoppingCart"));
-        };
-        shoppingCart.loadCart();
+        $("#show-cart").on("change", ".item-count", function(event) {
+            var name = $(this).attr("data-name");
+            var count = Number($(this).val());
+            shoppingCart.setCountForItem(name,count);
+            displayCart();
+        })
+       
         displayCart();
         //var array = listCart();
         
