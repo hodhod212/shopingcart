@@ -1,93 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>      
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <title>TechStore</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
-    <script src="mockups/main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/main2.css" />
+    <script src="mockups/main2.js"></script>
     <style>
-            body {
-              margin: 0;
-              font-family: Arial, Helvetica, sans-serif;
-            }
-            
-            .topnav {
-              overflow: hidden;
-              background-color: #333;
-            }
-            
-            .topnav a {
-              float: left;
-              color: #f2f2f2;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-              font-size: 17px;
-            }
-            
-            .topnav a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-            
-            .topnav a.active {
-              background-color: #4CAF50;
-              color: white;
-            }
-            </style>
-</head>
-<body onload="initSite()">
-        <div class="topnav">
-                <a class="active" href="#home">Techstore</a>
-                <a href="#news">Login</a>
-                <a href="#contact">Signin</a>
-                <a href="kundvagn.html" style="float:right;"><img src="assets/kundv_t.png" style="width:24px;"></a>
-                <a href="#" id="count-cart" style="float:right;">0</a>
-                <a href="#" style="float:right;"> <button id="clear-cart" class="mobile" style="border-radius:5px;">Rensa vagnen</button></a>
-            </div>
-              
-              
-      
-    <div id="mimmi" ></div>  
-
        
-              
-             
-              
-              
-                 
-</body >
+h3 {
+    text-align: center;
+}
 
-<script>
+a {
+    color:black;
+    display: inline;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+img{
+    height: 140px;
+   
+}
+
+body {
+    background-color: gray;
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+            
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+            
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+            
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+            
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body  onload="initSite()">
+    <div class="topnav">
+        <a class="active" href="index.html">Techstore</a>
+        
+        <a href="kundvagn.html" style="float:right;"><img src="assets/kundv_t.png" style="width:26px;height:26px ;"></a>
+        <a href="#" id="count-cart" style="float:right;">0</a>
+    </div>
+   <h3 style="color:black"> <img src="assets/kundv_f.png" style="height:30px;">Kundvagn</h3>
     
-///main div
-var listOfProducts;
+    <!--    
+        <a class="add-to-cart" href="#" data-name="iPhone X" data-price="11495">1</a> 
+        <a class="add-to-cart" href="#" data-name="One Plus 5" data-price="4995">2</a> 
+        <a class="add-to-cart" href="#" data-name="Galaxy S8" data-price="7990">3</a> 
+        <a class="add-to-cart" href="#" data-name="LG V30" data-price="7495">4</a> 
+        <a class="add-to-cart" href="#" data-name="iPhone_XS" data-price="11000">5</a>
+        <a class="add-to-cart" href="#" data-name="iphone7-guld" data-price="5000">6</a>
+        <a class="add-to-cart" href="#" data-name="samsung_Crown" data-price="10000">7</a>
+        <a class="add-to-cart" href="#" data-name="razerphone2" data-price="4000">8</a> 
+        <a class="add-to-cart" href="#" data-name="Xperia_XZ3" data-price="7500">9</a> 
+        <a class="add-to-cart" href="#" data-name="Samsung_Xcover" data-price="10500">10</a> 
+       
+    -->  
+    
+    <div class="mobile">
+        <ul id="show-cart"  style="display:block;">
+           <li></li>
+        </ul>
+        
+        <div style="text-align:center;color: black;"> Du har <span id="count-cart">0</span> varor i din korg</div>  
+        <div style="text-align:center;color:black;">Total pris: &nbsp;<span id="total-cart"></span>&nbsp;kr</div>
+        <div style="text-align:center;"> <button id="clear-cart" class="mobile" style="border:1px ;border-radius:4px;display:center;">Rensa vagnen</button></div>
+        <div  style="text-align:center;color:black;margin:5px;padding: 5px;">
+        <a href="index.html" style="border-radius:4px;display:center;" >
+        <button style="border:2px solid rgb(102, 120, 202);;border-radius:4px;background-color:rgb(102, 120, 202);display:center;" onclick="myFunction()">Slutför ditt köp</button></a></div>
+    </div>
 
-/** Get products from the json file and store it in a gobal variable */
-function loadProducts() {
-    fetch("products.json")
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(products) {
-        listOfProducts = products;
-        addProductsToWebpage();
-    });
-};
-function initSite() {
-    loadProducts();
-    var obj1 ={
+</body>
+<script>
+    function myFunction() {
+        alert("Du har slutfört ditt köp.");
+    }
+    </script>
+<script>
+    // navbar
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+// slut navbar js
+    ///main div
+    var listOfProducts;
+    
+    /** Get products from the json file and store it in a gobal variable */
+    function loadProducts() {
+        fetch("products.json")
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(products) {
+            listOfProducts = products;
+            addProductsToWebpage();
+        });
+    }
+    function initSite() {
+        loadProducts();
+        var obj1 ={
         "title": "iPhone X",
         "description": "Last years phonefrom  Apple  with a beautiful all display front.",
         "image": "assets/iPhoneX.png",
@@ -154,7 +201,7 @@ function initSite() {
         "price": 10500
     }
         
-    document.getElementById('mimmi').innerHTML ='<div style="text-align:center">'+
+    document.getElementById('mimmi').innerHTML ='<div style="text-align:center;">'+
     '<b>'+obj1.title+'</b>'+
     '<br>'+'<small>'+obj1.description+'</small>'+'<br>'+
         "<img src='assets/iPhoneX.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
@@ -211,10 +258,14 @@ function initSite() {
            '<b>'+ obj10.price + '</b>'+'kr'+'<br>'+
           '<a href="#" class="add-to-cart"  data-name="Samsung_Xcover" data-price="10500" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+ '</div>';
     
+        }
+       
+    
+            //jquery
+           
 
-        //jquery
-    //$("#total-cart").html("11495")
-    $(".add-to-cart").click(function(event) {
+        
+        $(".add-to-cart").click(function(event) {
             event.preventDefault();
             var name = $(this).attr("data-name");
             var price = Number($(this).attr("data-price"));
@@ -232,7 +283,7 @@ function initSite() {
             var output = "";
             for (var i in cartArray) {
                 output +="<div style='border-radius:5px; border:1px solid black;display:inline-block;margin:0 4px 0 4px;'>" 
-                    + '<img  src="'+'assets/'+cartArray[i].price+'.png">'+'<br>'  
+                    + '<img src="'+'assets/'+cartArray[i].price+'.png">'+'<br>'  
                     + cartArray[i].name +'<br>'
                     + "&nbsp; &nbsp;" 
                     + cartArray[i].count
@@ -322,7 +373,7 @@ function initSite() {
                 totalCount +=this.cart[i].count;
             }
             return totalCount;
-    
+            this.saveCart();
         };
         shoppingCart.totalCart = function () {
             var totalCost = 0;
@@ -330,7 +381,7 @@ function initSite() {
                 totalCost +=(this.cart[i].price)*this.cart[i].count; 
             }
            return totalCost.toFixed(2);
-          
+           this.saveCart();
         };
         shoppingCart.listCart = function () {
             var cartCopy = [];
@@ -345,7 +396,7 @@ function initSite() {
             cartCopy.push(itemCopy);
         }
         return cartCopy;
-      
+        this.saveCart();
         };
         shoppingCart.saveCart = function () {
             localStorage.setItem('shoppingCart', JSON.stringify(this.cart));
@@ -357,7 +408,18 @@ function initSite() {
         displayCart();
         //var array = listCart();
         
-}
-    ///
-    </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+   
+        ///
+        </script>
 </html>
