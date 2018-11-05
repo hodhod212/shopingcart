@@ -93,19 +93,21 @@ body {
            <li></li>
         </ul>
         
-        <div style="text-align:center;color: black;"> Du har <span id="count-cart">0</span> varor i din korg</div>  
         <div style="text-align:center;color:black;">Total pris: &nbsp;<span id="total-cart"></span>&nbsp;kr</div>
-        <div style="text-align:center;"> <button id="clear-cart" class="mobile" style="border:1px ;border-radius:4px;display:center;">Rensa vagnen</button></div>
-        <div  style="text-align:center;color:black;margin:5px;padding: 5px;">
-        <a href="index.html" style="border-radius:4px;display:center;" >
-        <button style="border:2px solid rgb(102, 120, 202);;border-radius:4px;background-color:rgb(102, 120, 202);display:center;" onclick="myFunction()">Slutför ditt köp</button></a></div>
-    </div>
 
+        <div style="text-align:center;"> <button onclick="klar()" id="clear-cart" class="mobile" style="border:1px ;border-radius:4px;display:center;">Slutför ditt köp</button></div>
+        <div  style="text-align:center;color:black;margin:5px;padding: 5px;">
+        </div>
+    
 </body>
 <script>
-    function myFunction() {
-        alert("Du har slutfört ditt köp.");
+
+
+    function klar() {
+     alert("Du har slutfört ditt köp.");
     }
+   
+
     </script>
 <script>
     // navbar
