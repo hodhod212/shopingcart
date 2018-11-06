@@ -283,7 +283,7 @@ function myFunction() {
             var cartArray = shoppingCart.listCart();
             var output = "";
             for (var i in cartArray) {
-                output +="<div style='font-size:smaller;border-radius:5px; border:1px solid blue;display:inline-block;color:black;margin:4px;'>" 
+                output +="<div style='font-size:smaller;border-radius:5px; border:1px solid blue;display:inline-block;background-color:lightblue;color:black;margin:4px;'>" 
                     + '<img src="'+'assets/'+cartArray[i].price+'.png">'+'<br>'
                     +'<h4>'+cartArray[i].name +'</h4>'
                     +" <input class='item-count' type = 'number' style='width:33px;height:19px;border-radius:3px;' data-name ='"  
