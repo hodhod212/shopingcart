@@ -187,6 +187,7 @@
     "<img src='assets/Samsung_Xcover.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
     '<b>'+ obj10.price + '</b>'+'kr'+'<br>'+
     '<a href="#" class="add-to-cart"  data-name="Samsung_Xcover" data-price="10500" style="background-color:blue;color:white;padding:3px;border-radius:4px;"><i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen</a>'+ '</div>';
+      //jquery
     $(".add-to-cart").click(function(event) {
             event.preventDefault();
             var name = $(this).attr("data-name");
@@ -200,12 +201,14 @@
             displayCart();
         });
          function  displayCart() {
-            
+            var obj = ["iPhone X","One Plus 5","Galaxy S8","LG V30","iPhone_XS",
+        "iphone7-guld","samsung_Crown","razerphone2","Xperia_XZ3","Samsung_Xcover"]
             var cartArray = shoppingCart.listCart();
             var output = "";
             for (var i in cartArray) {
                 output +="<div style='font-size:smaller;border-radius:5px; border:1px solid blue;display:inline-block;color:black;margin:4px;'>" 
                     + '<img src="'+'assets/'+cartArray[i].price+'.png">'+'<br>'
+                    +'<h4>'+obj[i] +'</h4>'
                     +" <input class='item-count' type = 'number' style='width:33px;height:19px;border-radius:3px;' data-name ='"  
                     +cartArray[i].name
                     + "' value ='" +  cartArray[i].count+ "' >"
@@ -250,7 +253,9 @@
         })
        
         displayCart();
-        //var array = listCart();       
+        //var array = listCart();
+        
+        ///
 }
     </script>
 </html>
