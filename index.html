@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -17,73 +17,63 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
     <script src="mockups/main.js"></script>
     <style>
-            body {
-              margin: 0;
-              font-family: Arial, Helvetica, sans-serif;
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000;
             }
             
-            .topnav {
-              overflow: hidden;
-              background-color: #333;
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
             }
             
-            .topnav a {
-              float: left;
-              color: #f2f2f2;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-              font-size: 17px;
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
             }
             
-            .topnav a:hover {
-              background-color: #ddd;
-              color: black;
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
             }
             
-            .topnav a.active {
-              background-color: #4CAF50;
-              color: white;
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
             }
             </style>
-</head>
-<body onload="initSite()">
+    </head>
+    <body onload="initSite()">
         <div class="topnav">
-                <a class="active" href="#home">Techstore</a>
-                <a href="kundvagn.html" style="float:right;"><img src="assets/kundv_t.png" style="width:24px;"></a>
-                <a href="#" id="count-cart" style="float:right;">0</a>
-                <a href="#" style="float:right;"> <button id="clear-cart" class="mobile" style="border-radius:5px;">Rensa vagnen</button></a>
-            </div>
-              
-              
-      
+            <a class="active" href="#home">Techstore</a>
+            <a href="kundvagn.html" style="float:right;"><img src="assets/kundv_t.png" style="width:24px;"></a>
+            <a href="#" id="count-cart" style="float:right;">0</a>
+            <a href="#" style="float:right;"> <button id="clear-cart" class="mobile" style="border-radius:5px;">Rensa vagnen</button></a>
+        </div>
     <div id="mimmi" ></div>  
+    </body >
+    <script src="mockups/shoppingCart.js"></script>
+    <script>
+    ///main div
+    var listOfProducts;
 
-       
-              
-             
-              
-              
-                 
-</body >
-<script src="mockups/shoppingCart.js"></script>
-<script>
-    
-///main div
-var listOfProducts;
-
-/** Get products from the json file and store it in a gobal variable */
-function loadProducts() {
-    fetch("products.json")
-    .then(function(response) {
+    /** Get products from the json file and store it in a gobal variable */
+    function loadProducts() {
+        fetch("products.json")
+        .then(function(response) {
         return response.json();
-    })
-    .then(function(products) {
+        })
+        .then(function(products) {
         listOfProducts = products;
         addProductsToWebpage();
     });
-};
-function initSite() {
+    };
+    function initSite() {
     loadProducts();
     var obj1 ={
         "title": "iPhone X",
@@ -91,24 +81,18 @@ function initSite() {
         "image": "assets/iPhoneX.png",
         "price": 11495
     }
-    
-    
       var obj2 ={
         "title": "One Plus 5",
         "description": "Sleek and powerful smartphone from One Plus.",
         "image": "assets/OnePlus5.png",
         "price": 4995
     }
-    
-    
       var obj3 ={
         "title": "Galaxy S8",
         "description":"Really cool edge to edge smartphone from Samsung.",
         "image": "assets/SamsungS8.png",
         "price": 7990
     }
-    
-    
       var obj4 ={
         "title": "LG V30",
         "description": "Super nice and beautiful smartphone from LG.",
@@ -150,66 +134,59 @@ function initSite() {
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "assets/Samsung_Xcover.png",
         "price": 10500
-    }
-        
+    }       
     document.getElementById('mimmi').innerHTML ='<div style="text-align:center">'+
     '<b>'+obj1.title+'</b>'+
     '<br>'+'<small>'+obj1.description+'</small>'+'<br>'+
-        "<img src='assets/iPhoneX.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
-       '<b>'+ obj1.price + '</b>'+'kr'+'<br>'+
-      '<a href="#" class="add-to-cart" href="#" data-name="iPhone X" data-price="11495" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+
-       '</div>'+'<br>'+ '<div style="text-align:center">'+'<b>'+obj2.title+'</b>'+'<br>'+
-      '<small>'+obj2.description+'</small>' +'<br>'+
-         "<img src='assets/OnePlus5.png' style='display: block; margin-left: auto; margin-right: auto;width: 280px;' >"
-       
-       +'<b>'+ obj2.price + '</b>'+'kr'+'<br>'+'<a class="add-to-cart" href="#" data-name="One Plus 5" data-price="4995" href="#" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+ '</div>'+
-       '<br>'+  '<div style="text-align:center">'
-        +'<b>'+obj3.title+'</b>'+'<br>'+'<small>'+obj3.description+'</small>'+'<br>'+
+    "<img src='assets/iPhoneX.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
+    '<b>'+ obj1.price + '</b>'+'kr'+'<br>'+
+    '<a href="#" class="add-to-cart" href="#" data-name="iPhone X" data-price="11495" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+
+    '</div>'+'<br>'+ '<div style="text-align:center">'+'<b>'+obj2.title+'</b>'+'<br>'+
+    '<small>'+obj2.description+'</small>' +'<br>'+
+    "<img src='assets/OnePlus5.png' style='display: block; margin-left: auto; margin-right: auto;width: 280px;' >"      
+    +'<b>'+ obj2.price + '</b>'+'kr'+'<br>'+'<a class="add-to-cart" href="#" data-name="One Plus 5" data-price="4995" href="#" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+ '</div>'+
+    '<br>'+  '<div style="text-align:center">'
+    +'<b>'+obj3.title+'</b>'+'<br>'+'<small>'+obj3.description+'</small>'+'<br>'+
     "<img src='assets/SamsungS8.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>"+
-      '<br>'+'<b>'+ obj3.price + '</b>'
-       +'kr'+'<br>'+'<a class="add-to-cart" href="#" data-name="Galaxy S8" data-price="7990" href="#" style="background-color:black;padding:3px;border-radius:4px;" ><small>läg till kundvägnen</small></a>'+
-      ' </div>'+'<br>'+'<div style="text-align:center">'+'<b>'+obj4.title+'</b>'+'<br>' +
-      
-      '<small>'+obj4.description+'</small>'+'<br>'+
-      "<img src='assets/LGV30.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>" +
-         '<b>'+ obj4.price + '</b>'+'kr'+'<br>'+'<a href="#" class="add-to-cart"  data-name="LG V30" data-price="7495" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+
-         '</div>'
-
-
-+'<br>'+'<div style="text-align:center">'+
-        '<b>'+obj5.title+'</b>'+
-        '<br>'+'<small>'+obj5.description+'</small>'+'<br>'+
-            "<img src='assets/iPhone_XS.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
-           '<b>'+ obj5.price + '</b>'+'kr'+'<br>'+
-          '<a href="#" class="add-to-cart"  data-name="iPhone_XS" data-price="11000" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+
-           '</div>'+'<div style="text-align:center">'+
-        '<b>'+obj6.title+'</b>'+
-        '<br>'+'<small>'+obj6.description+'</small>'+'<br>'+
-            "<img src='assets/iphone7-guld.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
-           '<b>'+ obj6.price + '</b>'+'kr'+'<br>'+
-          '<a href="#" class="add-to-cart"  data-name="iphone7-guld" data-price="5000" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+ '</div>'+
-          '<br>'+'<div style="text-align:center">'+'<b>'+obj7.title+'</b>'+'<br>'+
-          '<small>'+obj7.description+'</small>' +'<br>'+
-             "<img src='assets/samsung_Crown.png' style='display: block; margin-left: auto; margin-right: auto;width: 280px;' >"
-           +'<b>'+ obj7.price + '</b>'+'kr'+'<br>'+'<a href="#" class="add-to-cart"  data-name="samsung_Crown" data-price="10000" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+ '</div>'+
-           '<br>'+'<div style="text-align:center">'+'<b>'+obj8.title+'</b>'+'<br>'+
-           '<small>'+obj8.description+'</small>'+'<br>'+
-        "<img src='assets/razerphone2.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>"+
-      '<b>'+ obj8.price + '</b>'+'kr'+'<br>'+'<a href="#" class="add-to-cart"  data-name="razerphone2" data-price="4000"  style="background-color:black;padding:3px;border-radius:4px;" ><small>läg till kundvägnen</small></a>'+
-          ' </div>'+'<br>'+
-          '<div style="text-align:center">'+
-            '<b>'+obj9.title+'</b>'+'<br>' +
-          '<small>'+obj9.description+'</small>'+'<br>'+
-          "<img src='assets/Xperia_XZ3.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>" +
-             '<b>'+ obj9.price + '</b>'+'kr'+'<br>'+'<a href="#"class="add-to-cart"  data-name="Xperia_XZ3" data-price="7500"  style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+
-             '</div>'+ '<br>'+'<div style="text-align:center">'+
-        '<b>'+obj10.title+'</b>'+
-        '<br>'+'<small>'+obj10.description+'</small>'+'<br>'+
-            "<img src='assets/Samsung_Xcover.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
-           '<b>'+ obj10.price + '</b>'+'kr'+'<br>'+
-          '<a href="#" class="add-to-cart"  data-name="Samsung_Xcover" data-price="10500" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+ '</div>';
-    
-
+    '<br>'+'<b>'+ obj3.price + '</b>'
+    +'kr'+'<br>'+'<a class="add-to-cart" href="#" data-name="Galaxy S8" data-price="7990" href="#" style="background-color:black;padding:3px;border-radius:4px;" ><small>läg till kundvägnen</small></a>'+
+    '</div>'+'<br>'+'<div style="text-align:center">'+'<b>'+obj4.title+'</b>'+'<br>' +     
+    '<small>'+obj4.description+'</small>'+'<br>'+
+    "<img src='assets/LGV30.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>" +
+    '<b>'+ obj4.price + '</b>'+'kr'+'<br>'+'<a href="#" class="add-to-cart"  data-name="LG V30" data-price="7495" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+
+    '</div>'
+    +'<br>'+'<div style="text-align:center">'+
+    '<b>'+obj5.title+'</b>'+
+    '<br>'+'<small>'+obj5.description+'</small>'+'<br>'+
+    "<img src='assets/iPhone_XS.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
+    '<b>'+ obj5.price + '</b>'+'kr'+'<br>'+
+    '<a href="#" class="add-to-cart"  data-name="iPhone_XS" data-price="11000" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+
+    '</div>'+'<div style="text-align:center">'+
+    '<b>'+obj6.title+'</b>'+
+    '<br>'+'<small>'+obj6.description+'</small>'+'<br>'+
+    "<img src='assets/iphone7-guld.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
+    '<b>'+ obj6.price + '</b>'+'kr'+'<br>'+
+    '<a href="#" class="add-to-cart"  data-name="iphone7-guld" data-price="5000" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+ '</div>'+
+    '<br>'+'<div style="text-align:center">'+'<b>'+obj7.title+'</b>'+'<br>'+
+    '<small>'+obj7.description+'</small>' +'<br>'+
+    "<img src='assets/samsung_Crown.png' style='display: block; margin-left: auto; margin-right: auto;width: 280px;' >"
+    +'<b>'+ obj7.price + '</b>'+'kr'+'<br>'+'<a href="#" class="add-to-cart"  data-name="samsung_Crown" data-price="10000" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+ '</div>'+
+    '<br>'+'<div style="text-align:center">'+'<b>'+obj8.title+'</b>'+'<br>'+
+    '<small>'+obj8.description+'</small>'+'<br>'+
+    "<img src='assets/razerphone2.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>"+
+    '<b>'+ obj8.price + '</b>'+'kr'+'<br>'+'<a href="#" class="add-to-cart"  data-name="razerphone2" data-price="4000"  style="background-color:black;padding:3px;border-radius:4px;" ><small>läg till kundvägnen</small></a>'+
+    '</div>'+'<br>'+
+    '<div style="text-align:center">'+
+    '<b>'+obj9.title+'</b>'+'<br>' +
+    '<small>'+obj9.description+'</small>'+'<br>'+
+    "<img src='assets/Xperia_XZ3.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>" +
+    '<b>'+ obj9.price + '</b>'+'kr'+'<br>'+'<a href="#"class="add-to-cart"  data-name="Xperia_XZ3" data-price="7500"  style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+
+    '</div>'+ '<br>'+'<div style="text-align:center">'+
+    '<b>'+obj10.title+'</b>'+
+    '<br>'+'<small>'+obj10.description+'</small>'+'<br>'+
+    "<img src='assets/Samsung_Xcover.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
+    '<b>'+ obj10.price + '</b>'+'kr'+'<br>'+
+    '<a href="#" class="add-to-cart"  data-name="Samsung_Xcover" data-price="10500" style="background-color:black;padding:3px;border-radius:4px;"><small>läg till kundvägnen</small></a>'+ '</div>';
         //jquery
     //$("#total-cart").html("11495")
     $(".add-to-cart").click(function(event) {
@@ -230,15 +207,13 @@ function initSite() {
             var output = "";
             for (var i in cartArray) {
                 output +="<div style='border-radius:5px; border:1px solid black;display:inline-block;margin:0 4px 0 4px;'>" 
-                    + '<img  src="'+'assets/'+cartArray[i].price+'.png">'+'<br>'  
-                    + cartArray[i].name +'<br>'
-                    + "&nbsp; &nbsp;" 
-                    + cartArray[i].count
-                    + " x " 
-                    + cartArray[i].price 
-                    +  " = " 
-                    + cartArray[i].total.toFixed(2) 
-                    + " kr "+'<br>'
+                    + '<img src="'+'assets/'+cartArray[i].price+'.png">'+'<br>'
+                    +" <input class='item-count' type = 'number' style='width:38px;' data-name ='"  
+                    +cartArray[i].name
+                    + "' value ='" +  cartArray[i].count+ "' >"
+                    + " x " + cartArray[i].price
+                     +  " = " + cartArray[i].total.toFixed(2)
+                     + " kr "+'<br>'
                     + "<button class='plus-item' data-name='"
                     +cartArray[i].name+"' >+</button>"
                     + "<button class='subtract-item' data-name='"
@@ -246,10 +221,10 @@ function initSite() {
                     + "<button class='delete-item' data-name='"
                     +cartArray[i].name+"' >Ta bort</button>" 
                     + "</div>"
-            }
-            $("#show-cart").html(output);
-            $("#count-cart").html(shoppingCart.countCart());
-            $("#total-cart").html(shoppingCart.totalCart());
+             }        
+        $("#show-cart").html(output);
+        $("#count-cart").html(shoppingCart.countCart());
+        $("#total-cart").html(shoppingCart.totalCart());
         }
         $("#show-cart").on("click", ".delete-item", function(event){
         var name = $(this).attr("data-name");
@@ -267,16 +242,13 @@ function initSite() {
         displayCart();
         });
         $("#show-cart").on("change", ".item-count", function(event) {
-            var name = $(this).attr("data-name");
-            var count = Number($(this).val());
-            shoppingCart.setCountForItem(name,count);
-            displayCart();
+        var name = $(this).attr("data-name");
+        var count = Number($(this).val());
+        shoppingCart.setCountForItem(name,count);
+         displayCart();
         })
-       
         displayCart();
-        //var array = listCart();
-        
+        //var array = listCart();        
 }
-    ///
     </script>
 </html>

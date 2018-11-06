@@ -34,7 +34,7 @@ img{
 }
 
 body {
-    background-color: gray;
+    background-color: white;
     color: white;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -283,7 +283,7 @@ function myFunction() {
             var cartArray = shoppingCart.listCart();
             var output = "";
             for (var i in cartArray) {
-                output +="<div style='border-radius:5px; border:1px solid black;display:inline-block;margin:0 4px 0 4px;'>" 
+                output +="<div style='border-radius:5px; border:1px solid black;display:inline-block;color:black;margin:0 4px 0 4px;'>" 
                     + '<img src="'+'assets/'+cartArray[i].price+'.png">'+'<br>'
                     +" <input class='item-count' type = 'number' style='width:38px;' data-name ='"  
                     +cartArray[i].name
