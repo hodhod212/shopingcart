@@ -66,8 +66,8 @@ body {
 </style>
 </head>
 <body  onload="initSite()">
-    <div class="topnav" style="height:45px;">
-        <a class="active" href="index.html">Techstore</a>
+    <div class="topnav" style="height:45px;background-color:black;">
+        <a class="active" href="index.html" style="height:45px;background-color:black;"><b>TechStore</b></a>
         <a href="kundvagn.html" style="float:right;"><img src="assets/kundv_t.png" style="width:26px;height:26px ;"></a>
         <a href="#" id="count-cart" style="float:right;">0</a>
     </div>
@@ -93,8 +93,9 @@ body {
         </ul>
         
         <div style="text-align:center;color:black;">Total pris: &nbsp;<span id="total-cart"></span>&nbsp;kr</div>
-        <div style="text-align:center;"> <button onclick="klar()" id="clear-cart" class="mobile" style="border:1px ;background-color:cornflowerblue;  border-radius:5px;display:center;">Slutför ditt köp</button></div>
-        <div  style="text-align:center;color:black;margin:5px;padding: 5px;">
+        <div style="text-align:center;"> <button onclick="klar()" id="clear-cart" class="mobile" style="border:1px ;color:white;background-color:rgb(75, 75, 207);  border-radius:5px;display:center;">
+            <img src="assets/check.png" style="width: 17px;height: 17px;"> Slutför ditt köp</button></div>
+        <div  style="text-align:center;color:black;margin:5px;padding:5px;">
         </div>
     
 </body>
@@ -283,20 +284,20 @@ function myFunction() {
             var cartArray = shoppingCart.listCart();
             var output = "";
             for (var i in cartArray) {
-                output +="<div style='border-radius:5px; border:1px solid black;display:inline-block;color:black;margin:0 4px 0 4px;'>" 
+                output +="<div style='font-size:smaller;border-radius:5px; border:1px solid blue;display:inline-block;color:black;margin:4px;'>" 
                     + '<img src="'+'assets/'+cartArray[i].price+'.png">'+'<br>'
-                    +" <input class='item-count' type = 'number' style='width:38px;' data-name ='"  
+                    +" <input class='item-count' type = 'number' style='width:33px;height:19px;border-radius:3px;' data-name ='"  
                     +cartArray[i].name
                     + "' value ='" +  cartArray[i].count+ "' >"
                     + " x " + cartArray[i].price
                      +  " = " + cartArray[i].total.toFixed(2)
                      + " kr "+'<br>'
-                    + "<button class='plus-item' data-name='"
+                    + "<button style='background-color:red;color:white;border-radius:5px 0 0 5px;' class='plus-item' data-name='"
                     +cartArray[i].name+"' >+</button>"
-                    + "<button class='subtract-item' data-name='"
+                    + "<button style='background-color:red;color:white;' class='subtract-item' data-name='"
                     +cartArray[i].name+"' >-</button>"
-                    + "<button class='delete-item' data-name='"
-                    +cartArray[i].name+"' >Ta bort</button>" 
+                    + "<button class='delete-item' style='background-color:red;color:white;border-radius:0 5px 5px 0;' data-name='"
+                    +cartArray[i].name+"' ><img src='assets/trash.jpg' style='width:18px;height:18px;'> Ta bort</button>" 
                     + "</div>"
              }        
                     
