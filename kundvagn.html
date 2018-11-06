@@ -94,7 +94,7 @@ body {
         
         <div style="text-align:center;color:black;">Total pris: &nbsp;<span id="total-cart"></span>&nbsp;kr</div>
         <div style="text-align:center;"> <button onclick="klar()" id="clear-cart" class="mobile" style="border:1px ;color:white;background-color:rgb(75, 75, 207);  border-radius:5px;display:center;">
-            <img src="assets/check.png" style="width: 17px;height: 17px;"> Slutför ditt köp</button></div>
+            <i class="fa fa-check" style="font-size:24px;color:white"></i> Slutför ditt köp</button></div>
         <div  style="text-align:center;color:black;margin:5px;padding:5px;">
         </div>
     
@@ -297,7 +297,7 @@ function myFunction() {
                     + "<button style='background-color:red;color:white;' class='subtract-item' data-name='"
                     +cartArray[i].name+"' >-</button>"
                     + "<button class='delete-item' style='background-color:red;color:white;border-radius:0 5px 5px 0;' data-name='"
-                    +cartArray[i].name+"' ><img src='assets/trash.jpg' style='width:18px;height:18px;'> Ta bort</button>" 
+                    +cartArray[i].name+"' ><i class='fa fa-trash-o' style='font-size:16px;color:white'></i> Ta bort</button>" 
                     + "</div>"
              }        
                     
