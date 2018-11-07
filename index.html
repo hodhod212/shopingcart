@@ -49,8 +49,8 @@
             </style>
     </head>
     <body onload="initSite()">
-            <div class="topnav" style="height:45px;background-color:black;">
-            <a class="active" href="index.html" style="height:45px;background-color:black;"><b>TechStore</b></a>
+        <div class="topnav" style="height:40px;background-color:black;">
+            <a class="active" href="index.html" style="height:40px;background-color:black;"><b>TechStore</b></a>
             <a href="kundvagn.html" style="float:right;"><i class="fa fa-shopping-cart" style="font-size:24px;color:white;"></i></a>
             <a href="#" id="count-cart" style="float:right;">0</a>
             <a href="#" style="float:right;"> <button id="clear-cart" class="mobile" style="background-color:black;color:white;border:0;">Rensa vagnen</button></a>
@@ -107,31 +107,31 @@
     }
     var obj6 ={
         "title": "iphone7-guld",
-        "description": "Super nice and beautiful smartphone from LG.",
+        "description": "Super nice and beautiful smartphone from Apple.",
         "image": "assets/iphone7-guld.png",
         "price": 5000
     }
     var obj7 = {
         "title": "samsung_Crown",
-        "description": "Super nice and beautiful smartphone from LG.",
+        "description": "Super nice and beautiful smartphone from Samsung.",
         "image": "assets/samsung_Crown.png",
         "price": 10000
     }
     var obj8 = {
         "title": "razerphone2",
-        "description": "Super nice and beautiful smartphone from LG.",
+        "description": "Super nice and beautiful smartphone from Razer.",
         "image": "assets/razerphone2.png",
         "price": 4000
     }
     var obj9 ={
         "title": "Xperia_XZ3",
-        "description": "Super nice and beautiful smartphone from LG.",
+        "description": "Super nice and beautiful smartphone from Sony.",
         "image": "assets/Xperia_XZ3.png",
         "price": 7500
     }
     var obj10 = {
         "title": "Samsung_Xcover",
-        "description": "Super nice and beautiful smartphone from LG.",
+        "description": "Super nice and beautiful smartphone from Samsung.",
         "image": "assets/Samsung_Xcover.png",
         "price": 10500
     }       
@@ -147,7 +147,7 @@
     +'<b>'+ obj2.price + '</b>'+'kr'+'<br>'+'<a class="add-to-cart" href="#" data-name="One Plus 5" data-price="4995" href="#" style="background-color:rgb(75, 75, 207);color:white;padding:3px;border-radius:4px;"><i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen</a>'+ '</div>'+
     '<br>'+  '<div style="text-align:center">'
     +'<b>'+obj3.title+'</b>'+'<br>'+'<small>'+obj3.description+'</small>'+'<br>'+
-    "<img src='assets/SamsungS8.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>"+
+    "<img src='assets/SamsungS8.png' style='display: block; margin-left: auto; margin-right: auto;width: 180px;'>"+
     '<br>'+'<b>'+ obj3.price + '</b>'
     +'kr'+'<br>'+'<a class="add-to-cart" href="#" data-name="Galaxy S8" data-price="7990" href="#" style="background-color:rgb(75, 75, 207);color:white;padding:3px;border-radius:4px;" ><i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen</a>'+
     '</div>'+'<br>'+'<div style="text-align:center">'+'<b>'+obj4.title+'</b>'+'<br>' +     
@@ -158,33 +158,32 @@
     +'<br>'+'<div style="text-align:center">'+
     '<b>'+obj5.title+'</b>'+
     '<br>'+'<small>'+obj5.description+'</small>'+'<br>'+
-    "<img src='assets/iPhone_XS.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
+    "<img src='assets/iPhone_XS.png' style='display: block; margin-left: auto; margin-right: auto;width: 375px;height:375px;' >" +
     '<b>'+ obj5.price + '</b>'+'kr'+'<br>'+
     '<a href="#" class="add-to-cart"  data-name="iPhone_XS" data-price="11000" style="background-color:rgb(75, 75, 207);color:white;padding:3px;border-radius:4px;"><i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen</a>'+
-    '</div>'+'<div style="text-align:center">'+
-    '<b>'+obj6.title+'</b>'+
-    '<br>'+'<small>'+obj6.description+'</small>'+'<br>'+
-    "<img src='assets/iphone7-guld.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
+    '</div>'+ '<div style="text-align:center">'+'<br>'+'<br>' +'<b>'+obj6.title+'</b>'+
+    '<br>'+'<small>'+obj6.description+'</small>'+
+    "<img src='assets/iphone7-guld.png' style='display: block; margin-left: auto; margin-right: auto;width: 375px;height:375px;' >" +
     '<b>'+ obj6.price + '</b>'+'kr'+'<br>'+
     '<a href="#" class="add-to-cart"  data-name="iphone7-guld" data-price="5000" style="background-color:rgb(75, 75, 207);color:white;padding:3px;border-radius:4px;"><i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen</a>'+ '</div>'+
     '<br>'+'<div style="text-align:center">'+'<b>'+obj7.title+'</b>'+'<br>'+
     '<small>'+obj7.description+'</small>' +'<br>'+
-    "<img src='assets/samsung_Crown.png' style='display: block; margin-left: auto; margin-right: auto;width: 280px;' >"
+    "<img src='assets/samsung_Crown.png' style='display: block; margin-left: auto; margin-right: auto;width: 375px;height:375px;' >"
     +'<b>'+ obj7.price + '</b>'+'kr'+'<br>'+'<a href="#" class="add-to-cart"  data-name="samsung_Crown" data-price="10000" style="background-color:rgb(75, 75, 207);color:white;padding:3px;border-radius:4px;"><i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen</a>'+ '</div>'+
     '<br>'+'<div style="text-align:center">'+'<b>'+obj8.title+'</b>'+'<br>'+
     '<small>'+obj8.description+'</small>'+'<br>'+
-    "<img src='assets/razerphone2.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>"+
+    "<img src='assets/razerphone2.png' style='display: block; margin-left: auto; margin-right: auto;width: 375px;height:375px;'>"+
     '<b>'+ obj8.price + '</b>'+'kr'+'<br>'+'<a href="#" class="add-to-cart"  data-name="razerphone2" data-price="4000"  style="background-color:rgb(75, 75, 207);color:white;padding:3px;border-radius:4px;" ><i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen</a>'+
     '</div>'+'<br>'+
     '<div style="text-align:center">'+
     '<b>'+obj9.title+'</b>'+'<br>' +
     '<small>'+obj9.description+'</small>'+'<br>'+
-    "<img src='assets/Xperia_XZ3.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;'>" +
+    "<img src='assets/Xperia_XZ3.png' style='display: block; margin-left: auto; margin-right: auto;width: 375px;height:375px;'>" +
     '<b>'+ obj9.price + '</b>'+'kr'+'<br>'+'<a href="#"class="add-to-cart"  data-name="Xperia_XZ3" data-price="7500"  style="background-color:rgb(75, 75, 207);color:white;padding:3px;border-radius:4px;"><i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen</a>'+
     '</div>'+ '<br>'+'<div style="text-align:center">'+
     '<b>'+obj10.title+'</b>'+
     '<br>'+'<small>'+obj10.description+'</small>'+'<br>'+
-    "<img src='assets/Samsung_Xcover.png' style='display: block; margin-left: auto; margin-right: auto;width: 200px;' >" +
+    "<img src='assets/Samsung_Xcover.png' style='display: block; margin-left: auto; margin-right: auto;width: 375px;height:375px;' >" +
     '<b>'+ obj10.price + '</b>'+'kr'+'<br>'+
     '<a href="#" class="add-to-cart"  data-name="Samsung_Xcover" data-price="10500" style="background-color:rgb(75, 75, 207);color:white;padding:3px;border-radius:4px;"><i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen</a>'+ '</div>';
       //jquery
