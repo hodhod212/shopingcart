@@ -1,0 +1,16 @@
+ var Button = document.createElement('button');
+        Button.setAttribute('href','#')
+        Button.setAttribute('data-name',listOfProducts[i].name);
+        Button.setAttribute('data-price', listOfProducts[i].price);
+        Button.setAttribute('class', 'add-to-cart');
+        Button.setAttribute('onclick', addProduct.bind(undefined, listOfProducts[i]));
+
+        Button.innerHTML = '<i class="fa fa-cart-arrow-down" style="font-size:22px;color:white;margin-right:4px;"></i>läg till kundvägnen';
+        h4.appendChild(Button);
+        p.appendChild(myImage);
+        p.appendChild(h4)
+        li.appendChild(h2);
+        li.appendChild(p);
+        document.body.appendChild(li); }
+        function addProduct(product){
+        console.log(product);
