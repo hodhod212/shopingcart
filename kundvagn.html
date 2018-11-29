@@ -75,12 +75,10 @@ body {
         <a href="#" id="count-cart" style="float:right;">0</a>
     </div>
    <h3 style="color: #212121"> <i class="fa fa-shopping-cart" style="margin-right:5px;font-size:24px;color: #212121;"></i>Kundvagn</h3>
-    
-<<<<<<< HEAD
+
         
-=======
-      
->>>>>>> 85f762fe37df61b9e1d5824407ffbc2badb81099
+
+    
         <a class="add-to-cart" href="#" data-name="iPhone X" data-price="11495">1</a> 
         <a class="add-to-cart" href="#" data-name="One Plus 5" data-price="4995">2</a> 
         <a class="add-to-cart" href="#" data-name="Galaxy S8" data-price="7990">3</a> 
@@ -90,14 +88,7 @@ body {
         <a class="add-to-cart" href="#" data-name="samsung_Crown" data-price="10000">7</a>
         <a class="add-to-cart" href="#" data-name="razerphone2" data-price="4000">8</a> 
         <a class="add-to-cart" href="#" data-name="Xperia_XZ3" data-price="7500">9</a> 
-        <a class="add-to-cart" href="#" data-name="Samsung_Xcover" data-price="10500">10</a> 
-       
-<<<<<<< HEAD
-    
-=======
-     
->>>>>>> 85f762fe37df61b9e1d5824407ffbc2badb81099
-    
+        <a class="add-to-cart" href="#" data-name="Samsung_Xcover" data-price="10500">10</a>  
     <div class="mobile">
         <ul id="show-cart"  style="display:block;">
            <li></li>
@@ -131,8 +122,6 @@ function myFunction() {
         x.className = "topnav";
     }
 }
-<<<<<<< HEAD
-=======
 // slut navbar js
     ///main div
     var listOfProducts;
@@ -185,9 +174,7 @@ function myFunction() {
         function addProduct(element) {
         console.log(JSON.parse(element.getAttribute("data")))
     }
-       
-}
->>>>>>> 85f762fe37df61b9e1d5824407ffbc2badb81099
+
     
             //jquery
            
@@ -232,7 +219,6 @@ function myFunction() {
             $("#show-cart").html(output);
             $("#count-cart").html(shoppingCart.countCart());
             $("#total-cart").html(shoppingCart.totalCart());
-        }
         $("#show-cart").on("click", ".delete-item", function(event){
         var name = $(this).attr("data-name");
         shoppingCart.removeItemFromCartAll(name);
@@ -257,12 +243,8 @@ function myFunction() {
        
         displayCart();
         //var array = listCart();
-<<<<<<< HEAD
- 
-=======
         addProduct();
-   
->>>>>>> 85f762fe37df61b9e1d5824407ffbc2badb81099
+         }
         ///
         </script>
 </html>
